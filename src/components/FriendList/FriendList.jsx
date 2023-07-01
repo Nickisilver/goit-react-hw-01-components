@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import css from './FriendList.module.css';
 
 export const FriendList = ({friends}) => {
-  console.log(friends);
+
   return (
     <ul className={css.friendList}>
       {friends.map(friend =>  <li key={friend.id} className={css.item}>
@@ -13,3 +13,7 @@ export const FriendList = ({friends}) => {
     </ul>
   );
 };
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(PropTypes.shape),
+}

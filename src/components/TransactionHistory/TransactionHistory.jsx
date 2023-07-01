@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import css from './TransactionHistory.module.css';
 
 export const TransactionHistory = ({ actions }) => {
-  console.log(actions);
   return (
     <table className={css.transactionHistory}>
       <thead>
@@ -26,4 +25,6 @@ export const TransactionHistory = ({ actions }) => {
   );
 };
 
-TransactionHistory.prototype = {};
+TransactionHistory.prototype = {
+  actions: PropTypes.arrayOf(PropTypes.shape),
+};

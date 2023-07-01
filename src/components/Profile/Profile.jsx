@@ -10,7 +10,6 @@ export const Profile = ({
   views,
   likes,
 }) => {
-  console.log(username)
   return (
     <div className={css.profile}>
       <div className={css.desc}>
@@ -25,7 +24,7 @@ export const Profile = ({
           <span className={css.label}>Followers</span>
           <span className={css.quantity}>{followers}</span>
         </li>
-        
+
         <li className={css.item}>
           <span className={css.label}>Views</span>
           <span className={css.quantity}>{views}</span>
